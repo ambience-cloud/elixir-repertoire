@@ -1,0 +1,17 @@
+version: "3"
+services:
+  elixir-repertoire:
+    container_name: elixir-repertoire
+    image: elixirtech/elixir-repertoire
+    environment:
+       - externalhost=${externalhost}
+       - externalport=${externalport}
+       - externalprotocol=${externalprotocol}
+    ports:
+       - 1730:1730
+#Map this volume if you like to use a locally deployed licence
+   # volumes:
+   #   - type: bind
+   #     source: ./etc/ElixirAmbience.licence
+   #     target: /opt/elixir/Ambience/etc/ElixirAmbience.licence
+     
