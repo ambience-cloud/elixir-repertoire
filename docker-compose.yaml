@@ -1,8 +1,7 @@
-version: "3"
 services:
   elixir-repertoire:
     container_name: elixir-repertoire
-    image: elixirtech/elixir-repertoire
+    image: elixirtech/elixir-repertoire:${version}
     environment:
        - externalhost=${externalhost}
        - externalport=${externalport}
